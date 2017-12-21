@@ -61,6 +61,23 @@ md-content {
 
 .listagem-questionarios md-whiteframe {
     background: #fff;
-    margin: 30px;
+    margin: 10px;
     height: 100px; 
+
+}
+
+.dialog { 
+    min-height: 300px; 
+    min-width: 600px;
+}
+
+.dialog  md-whiteframe {
+    background: #fff;
+    margin: 10px;
+    height: 100px; 
+
+}
+
+.listar-turmas {
+    text-align:center;
 }

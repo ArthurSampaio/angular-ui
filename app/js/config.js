@@ -62,7 +62,7 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider, $mdT
         })
 
         .state("sad-admin.aplicar-questionario", {
-            url: "/aplicar-questionario",
+            url: "/listar-questionarios",
             views: {
                 content: {
                     templateUrl: 'view/aplicar-questionario.html',

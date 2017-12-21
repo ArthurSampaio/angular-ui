@@ -20,5 +20,24 @@
             return deffered.promise;
         };
 
+        questionarioService.aplicarQuestionario = (questionarioId, disciplinaId) => {
+
+            let deffered = $q.defer(); 
+            const info = {
+                "questionarioId": questionarioId,
+                "disciplinaId": disciplinaId
+            }
+            console.log(info)
+            $http.post(`${uri}/aplicar/questionarioId`, disciplinaId).then(
+                function success(response){
+                    deffered.resolve(response);
+                }, function error(response){
+                    deffered.reject(response);
+                }
+            );
+            return deffered.promise;
+
+        };
+
     });
 })();

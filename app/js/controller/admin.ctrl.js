@@ -36,7 +36,7 @@
 			},
 			{
 				icon: 'create',
-				title: 'Aplicar Questionário',
+				title: 'Listar Questionário',
 				state: 'sad-admin.aplicar-questionario'
 			}
 		];

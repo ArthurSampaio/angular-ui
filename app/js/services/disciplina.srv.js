@@ -22,5 +22,17 @@
 
             return deffered.promise;
         };
+
+        disciplinaService.getTodasAsDisciplinas = () => {
+            let deffered = $q.defer(); 
+            $http.get(uri).then(function success(response){
+                deffered.resolve(response);
+            }, function error(data){
+                deferred.reject(data);
+            });
+            return deffered.promise;
+        }
+
+
     });
 })();
