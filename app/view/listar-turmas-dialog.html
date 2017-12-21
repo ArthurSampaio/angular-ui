@@ -1,0 +1,40 @@
+<md-dialog aria-label="Aplicar Questionário">
+    <form ng-cloak>
+        <md-toolbar c>
+            <div class="md-toolbar-tools listar-turmas">
+                <h2>Aplicar Questionario</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <i class="material-icons">exit_to_app</i>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content class="dialog">
+            <div class="md-dialog-content" layout="row" layout-wrap>
+
+                <md-whiteframe ng-repeat="turma in dialogCtrl.turmas" class="md-whiteframe-1dp" flex="33" layout layout-align="center center"
+                    ng-click="dialogCtrl.aplicar(turma)">
+                    <md-list-item class="md-3-line">
+                        <div class="md-list-item-text" layout="column">
+                            <h3> <strong>{{ turma.nome }} | {{ turma.turma }}</strong></h3>
+                            <h4><strong>Semestre</strong>: {{ turma.semestre }} </h4>
+                            <p> {{ turma.codigo }} </p>
+                        </div>
+                    </md-list-item>
+                </md-whiteframe>
+            </div>
+        </md-dialog-content>
+
+        <!--<md-dialog-actions layout="row">
+            
+            <span flex></span>
+            <md-button ng-click="dialogCtrl.answer('not useful')">
+                Not Useful
+            </md-button>
+            <md-button ng-click="dialogCtrl.answer('useful')">
+                Useful
+            </md-button>
+        </md-dialog-actions>-->
+    </form>
+</md-dialog>    
